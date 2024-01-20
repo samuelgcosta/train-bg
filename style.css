@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.responsive-container {
+    /* Div contendo os elementos para todas as telas */
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 40vh; /* Valor padrão para telas menores que 1025px */
+    background-image: url(https://nataliaferreirabeauty.com/wp-content/uploads/2023/11/S1-Teste1.png); /* Fundo para tablet e desktop */
+    
+
+    /* Ajuste para dispositivos desktops */
+    @media all and (min-width: 1025px) {
+        height: 80vh; /* Altura para dispositivos desktops */
+    }
+
+    /* Ajuste para tablets */
+    @media all and (min-width: 768px) and (max-width: 1024px) {
+        height: 40vh;
+        background-image: url(https://nataliaferreirabeauty.com/wp-content/uploads/2023/11/S1-Teste1.png); /* Fundo para tablet e desktop */
+    }
+
+    /* Oculta a imagem de fundo do desktop em dispositivos móveis */
+    @media all and (max-width: 767px) {
+        background-image: none;
+    }
+}
+
+#Bg-Mobile {
+    /* Oculta a imagem de fundo para tablet e desktop */
+    display: none;
+
+    /* Exibe a imagem de fundo para dispositivos móveis */
+    @media all and (max-width: 767px) {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
